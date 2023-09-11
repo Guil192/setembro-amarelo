@@ -69,25 +69,23 @@ section {
   border-radius: 40px;
 }
 
-/* .marca-texto {
-  padding: 1px 5px;
-  margin: 3px;
-  animation: grifar 3s timing-function delay iteration-count direction fill-mode;
-  animation-name: grifar;
-  animation-duration: 1s;
-  anima
+.marca-texto {
+  background-color: #fffb15;
+  padding: 1px 10px;
+  margin: 10px 0 ;
+  animation: grifar 3s ease;
 }
 
 @keyframes grifar {
   from {
-    background-color: #fffff;
+    background-color: #ffff;
   }
 
   to {
     background-color: #FFA500;
   }
 
-} */
+}
 
 /* Seção Principal */
 .secao-principal {
@@ -109,6 +107,7 @@ section {
 
 .container-text-imagem {
   width: 40%;
+  line-height: 130px;
 }
 
 .title {
@@ -277,3 +276,7 @@ section {
      left: 0%; 
    } 
  }
+
+ /* Sinais / prevenção */
+
+ 

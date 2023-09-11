@@ -14,7 +14,7 @@
     <div class="secao-principal flex">
       
       <div class="container-text-imagem flex">
-        <p class="title"> <span class="marca-texto">Ouvir</span>, acolher, ajudar</p>
+        <p class="title"> <span class="marca-texto">Ouvir</span>, <span class="marca-texto">acolher</span>, <span class="marca-texto">ajudar</span></p>
       </div>
       
       <div class="img-principal">
@@ -22,6 +22,22 @@
       </div>
     </div>
   </section>
+
+  <section>
+    
+    <div class="secao-principal flex">
+      
+      <div class="img-principal">
+        <img src="img/friends.png" alt="">
+      </div>
+      
+      <div class="container-text-imagem flex">
+        <p class="title">Você não está<span class="marca-texto">sozinho</span></p>
+      </div>
+      
+    </div>
+  </section>
+
     
   <section>
     
@@ -98,10 +114,12 @@
          <div class="hidden" id="feliz">
            <p class="texto-condicional" >Junte-se às atividades de prevenção,conscientização e eventos no Setembro Amarelo. Junte-se à luta!</p>
            <a href="https://www.cvv.org.br/voluntario/" class="b"><button class="btn">Seja um voluntário</button></a>
-           
          </div>
          
-         <img src="https://www.ceara.gov.br/wp-content/uploads/2020/09/banner_set_amarelo_suicidio_set2020-768x482.png" class="hidden" id="triste">
+         <div class="hidden" id="triste">
+          <p class="texto-condicional" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae labore unde repudiandae iusto dicta earum del</p>
+          <a href="https://www.cvv.org.br/voluntario/" class="b"><button class="btn">Converse com o cvv</button></a>
+        </div>
          
         </div>
       </div>
@@ -118,7 +136,7 @@
        
          
        </div>
-       <input type="range" min="0" max="1" value="0" id="felicidade" style="width: 100%">
+       <input type="range" min="0" max="200" value="0" id="felicidade" style="width: 100%">
        
        
      </div>
@@ -134,7 +152,7 @@
         
         let value = slider.value;
         
-        if ( value >= 1) {
+        if ( value >= 100) {
           triste.classList.remove('hidden')
           feliz.classList.add('hidden')
           
@@ -188,13 +206,17 @@
     <div class="secao-principal flex">
       
       <div class="container-text-imagem flex">
-        <p class="title">Não é frescura</p>
+        <p class="title">Não é <span class="marca-texto"> frescura</span></p>
       </div>
       
       <div class="img-principal">
         <img src="img/triste.png" alt="">
       </div>
     </div>
+  </section>
+
+  <section>
+    <div class="time-line"></div>
   </section>
 
 </body>
