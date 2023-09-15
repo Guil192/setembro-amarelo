@@ -278,5 +278,38 @@ section {
  }
 
  /* Sinais / prevenção */
+.prevencao {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.container-sinal {
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.img-sinal {
+  max-height: 300px;
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.img-sinal img {
+  width: 100%;
+}
+
+.content-sinal  {
+  display: none;
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  transition: all 90s;
+  text-align: center;
+}
+
+.container-sinal:hover .content-sinal{
+  display: flex;
+}
 
  
