@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+  <section>
+
+    <div class="secao-padrao flex">
+
+      <div class="container-text-imagem flex">
+        <p class="title"> <span class="marca-texto">Ouvir</span>, <span class="marca-texto">acolher</span>, <span
+            class="marca-texto">ajudar</span></p>
+      </div>
+
+      <div class="img-principal">
+        <img src="img/love.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+    <div class="secao-padrao flex">
+
+      <div class="img-principal">
+        <img src="img/friends.png" alt="">
+      </div>
+
+      <div class="container-text-imagem flex">
+        <p class="title">Você não está<span class="marca-texto">sozinho</span></p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+
+    <div class="container flex">
+
+      <div class="forma-quadrado"></div>
+
+      <div class="cards flex">
+
+        <div class="card">
+
+          <div class="circle">
+            <div title-card>
+              <h2>(IMG)</h2>
+            </div>
+
+          </div>
+
+          <div class="content">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt lectus metus, quis vehicula erat
+              congue ac. Nunc congue dolor sed maximus rhoncus. Vestibulum a sapien non nisi varius imperdiet. Proin ac
+              arcu lacus. In ligula neque, iaculis vitae felis sit amet </p>
+
+            <a href="#">Saiba mais</a>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="circle">
+            <div title-card>
+              <h2>(IMG)</h2>
+            </div>
+
+          </div>
+
+          <div class="content">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt lectus metus, quis vehicula erat
+              congue ac. Nunc congue dolor sed maximus rhoncus. Vestibulum a sapien non nisi varius imperdiet. Proin ac
+              arcu lacus. In ligula neque, iaculis vitae felis sit amet </p>
+
+            <a href="#">Saiba mais</a>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="circle">
+            <div title-card>
+              <h2>(IMG)</h2>
+            </div>
+
+          </div>
+
+          <div class="content">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt lectus metus, quis vehicula erat
+              congue ac. Nunc congue dolor sed maximus rhoncus. Vestibulum a sapien non nisi varius imperdiet. Proin ac
+              arcu lacus. In ligula neque, iaculis vitae felis sit amet </p>
+
+            <a href="#">Saiba mais</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+ 
+  <section>
+
+    <div class="container_inputFelicidade flex">
+
+      <div class="section">
+        <div class="emojis">
+
+          <div class="hidden" id="feliz">
+            <p class="texto-condicional">Junte-se às atividades de prevenção,conscientização e eventos no Setembro
+              Amarelo. Junte-se à luta!</p>
+            <a href="https://www.cvv.org.br/voluntario/" class="b"><button class="btn">Seja um voluntário</button></a>
+          </div>
+
+          <div class="hidden" id="triste">
+            <p class="texto-condicional">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae labore unde
+              repudiandae iusto dicta earum del</p>
+            <a href="https://www.cvv.org.br/voluntario/" class="b"><button class="btn">Converse com o cvv</button></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slider flex">
+
+        <p class="sub-title">COMO VOCÊ ESTÁ?</p>
+
+        <div class="range-pontos">
+
+          <img
+            src="https://w7.pngwing.com/pngs/528/425/png-transparent-smile-emoji-happy-happiness-happy-face-yellow-smiling-message-social-networks-whatsapp-thumbnail.png"
+            alt="">
+
+          <img
+            src="https://static.vecteezy.com/ti/vetor-gratis/p1/22932674-chorando-emoji-triste-emoticon-face-com-lagrima-derrubar-gratis-vetor.jpg"
+            alt="">
+
+
+        </div>
+        <input type="range" min="0" max="200" value="0" id="felicidade" style="width: 100%">
+
+
+      </div>
+
+    </div>
+
+    <script>
+      const slider = document.querySelector('#felicidade')
+
+      const feliz = document.querySelector('#feliz')
+      const triste = document.querySelector('#triste')
+      slider.oninput = () => {
+
+        let value = slider.value;
+
+        if (value >= 100) {
+          triste.classList.remove('hidden')
+          feliz.classList.add('hidden')
+
+        } else {
+          feliz.classList.remove('hidden')
+          triste.classList.add('hidden')
+        }
+
+      }
+    </script>
+
+  </section>
+  <section>
+
+    <div class="secao-motivacional flex">
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Twemoji12_1f397.svg/440px-Twemoji12_1f397.svg.png"
+          alt="">
+      </div>
+      <div class="container-text">
+
+        <p>
+          <span class="text primeiro-texto">Você é </span>
+          <span class="text segundo-texto">Legal ❤</span>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const text = document.querySelector(".segundo-texto");
+
+      const textLoad = () => {
+        setTimeout(() => {
+          text.textContent = "especial ❤";
+        }, 0);
+        setTimeout(() => {
+          text.textContent = "importante ❤";
+        }, 4000);
+        setTimeout(() => {
+          text.textContent = "amado ❤";
+        }, 8000); //1s = 1000 milliseconds 
+      }
+
+      textLoad();
+      setInterval(textLoad, 12000);
+
+    </script>
+  </section>
+
+  <section>
+
+    <div class="secao-padrao flex">
+
+      <div class="container-text-imagem flex">
+        <p class="title">Não é <span class="marca-texto"> frescura</span></p>
+      </div>
+
+      <div class="img-principal">
+        <img src="img/triste.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="secao-padrao secao-prevencao">
+    <h1>Sinais de alerta</h1>
+    <div class="prevencao">
+      
+      <div class="container-sinal flex">
+
+        <div class="img-sinal">
+          <img src="img/chorando.png" alt="">
+          <p>Pensamentos Suícidas</p>
+        </div>
+
+        <div class="content-sinal flex">
+          <p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares ou nas redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".</p>
+        </div>
+      </div>
+
+      <div class="container-sinal flex">
+
+        <div class="img-sinal">
+          <img src="img/chorando.png" alt="">
+          <p>Pensamentos Suícidas</p>
+        </div>
+
+        <div class="content-sinal flex">
+          <p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares ou nas redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".</p>
+        </div>
+      </div>
+
+      <div class="container-sinal flex">
+
+        <div class="img-sinal">
+          <img src="img/chorando.png" alt="">
+          <p>Pensamentos Suícidas</p>
+        </div>
+
+        <div class="content-sinal flex">
+          <p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares ou nas redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".</p>
+        </div>
+      </div>
+
+      <div class="container-sinal flex">
+
+        <div class="img-sinal">
+          <img src="img/chorando.png" alt="">
+          <p>Pensamentos Suícidas</p>
+        </div>
+
+        <div class="content-sinal flex">
+          <p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares ou nas redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+</body>
+
+</html>

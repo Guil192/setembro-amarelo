@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bgColor: #fff;
+  --segundaryColor: #FFD600; 
+  --primaryColor: #FFB40D;
+}
+
 body {
   background: blue;
   display: flex;
@@ -31,7 +37,7 @@ body {
 .forma-quadrado {
   position: absolute;
   left: 0;
-  background: #fff3;
+  background: var(--segundaryColor);
   height: 100%;
   width: 80%;
   border-radius: 0px 50px 40px 0;
@@ -88,20 +94,19 @@ section {
 }
 
 /* Seção Principal */
-.secao-principal {
+.secao-padrao {
   flex-wrap: wrap;
   width: 100%;
-  
   background: #fff;
 }
 
 
-.secao-principal img {
+.secao-padrao img {
   max-width: 100%;
 }
 
 .img-principal {
-  width: 50%;
+  width: 40%;
   min-width: 500px;
 }
 
@@ -117,9 +122,8 @@ section {
 }
 
 /* Seção de cards */
-
 .container {
-  margin-top: 400px;
+ 
   position: relative;
   width: 100%;
   height: auto;
@@ -176,7 +180,7 @@ section {
 
 /* Funcionalidade nivel de felicidade*/
 
-.wrapper {
+.container_inputFelicidade {
   flex-direction: column;
   gap: 90px;
   background: #fff;
@@ -184,7 +188,7 @@ section {
   border-radius: 10px;
 }
 
-.wrapper {
+.container_inputFelicidade {
   height: auto;
   width: 90vw;
 }
@@ -204,7 +208,7 @@ section {
   height: 100%;
 }
 
-.wrapper .slider {
+.container_inputFelicidade .slider {
   flex-direction: column;
   width: 50vw;
   gap: 20px;
@@ -279,31 +283,39 @@ section {
 
  /* Sinais / prevenção */
 .prevencao {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
   padding: 20px;
 }
+
+.secao-prevencao > h1 {
+  margin: 60px;
+}
+
 .container-sinal {
+  max-width: 90vh;
   gap: 20px;
   padding: 10px;
   border: 1px solid black;
+  border-radius: 15px;
 }
 
 .img-sinal {
-  max-height: 300px;
-  width: 200px;
-  border: 1px solid black;
+  max-height: 350px;
+  width: 150px;
   text-align: center;
 }
 
 .img-sinal img {
-  width: 100%;
+  width: 70%;
 }
 
 .content-sinal  {
   display: none;
   width: 500px;
   height: 200px;
-  border: 1px solid black;
   transition: all 90s;
   text-align: center;
 }
@@ -312,4 +324,10 @@ section {
   display: flex;
 }
 
- 
+@media screen and ( max-width: 992px) {
+
+  .prevencao {
+    flex-direction: column;
+  }
+
+}
