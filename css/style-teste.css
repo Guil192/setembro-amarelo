@@ -1,0 +1,58 @@
+
+
+/* cards */
+.container {
+
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+.cards {
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.container .cards .card {
+    position: relative;
+    width: 270px;
+    height: 480px;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.container .circle {
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(180px at center 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.circle>div {
+    margin-bottom: 385px;
+    color: yellow;
+}
+
+.card .content {
+    position: relative;
+    bottom: 280px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .content a {
+    display: inline-block;
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+}

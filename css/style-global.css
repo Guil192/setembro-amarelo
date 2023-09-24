@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+:root {
+    --cor-primaria: 	#ffde1a;
+    --cor-secundaria: 	#ffa700;
+    --cor-fundo-primaria: white;
+    --cor-fundo-secundaria: rgb(249, 248, 245);
+}
+ 
+ul, ol, li {
+    list-style: none;
+}
+
+frame, frameset {
+    outline: none;
+    border: 0 solid transparent;
+}
+
+.nav-link {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-link p {
+    z-index: 2;
+}
+
+.nav-link:link, .nav-link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list-fundo {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    position: absolute;
+    background: var(--cor-secundaria);
+    opacity: 0;
+    transition: all 0.1s ease-in;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:hover .nav-list-fundo {
+    opacity: 1;
+}

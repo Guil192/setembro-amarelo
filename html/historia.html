@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .card:link,
+        .card:visited,
+        .card:active {
+            width: 300px;
+            border-radius: 20px;
+            height: 300px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.116);
+            color: black;
+            flex-direction: row;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            background: var(--cor-primaria);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="flex section-principal">
+        <div class="principal-conteudo">
+            <h1>Setembro<br> <span class="titulo-destaque">amarelo</span></h1>
+        </div>
+        <img class="principal-icon" src="../img/icon-laco.png" alt="">
+    </section>
+
+    <section class="historia-wrapper flex">
+        <a class="card" href="historia1.html">História</a>
+        <a class="card" href="historia2.html">O que é CVV</a>
+        <a class="card" href="historia3.html">Depoimento</a>
+    </section>
+
+    <footer>
+		<div>
+			<h4>Busque ajuda</h4>
+			<a class="footer-link" href="https://www.cvv.org.br/voluntario/">Acesse o site da CVV</a>
+		</div>
+		<nav>
+			<h4>Navegação</h4>
+			<ul>
+				<li><a href="paginaIncial.html" class="footer-link" target="main">Home</a></li>
+				<li><a href="historia.html" class="footer-link" target="main">História</a></li>
+			</ul>
+		</nav>
+
+		<div>
+			<p>Não hesite em buscar por ajuda, nossa instituição está aqui por você :) </p>
+		</div>
+	</footer>
+</body>
+
+</html>

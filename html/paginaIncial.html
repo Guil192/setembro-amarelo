@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<section class="flex section-principal">
+		<div class="principal-conteudo">
+			<h1>Setembro<br> <span class="titulo-destaque">amarelo</span></h1>
+		</div>
+		<img class="principal-icon" src="../img/icon-laco.png" alt="">
+	</section>
+
+	<!-- <section>
+		<div class="secao-padrao flex">
+			<div class="container-text-imagem flex">
+				<p class="title">
+					<span class="marca-texto">Ouvir</span>,
+					<span class="marca-texto">acolher</span>,
+					<span class="marca-texto">ajudar</span>.
+				</p>
+			</div>
+			<div class="../img-principal">
+				<img src="../img/love.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section></section>
+		<div class="secao-padrao flex">
+			<div class="img-principal">
+				<img src="img/friends.png" alt="">
+			</div>
+			<div class="container-text-imagem flex">
+				<p class="title">Você não está<span class="marca-texto">sozinho</span></p>
+			</div>
+		</div>
+	</section> -->
+
+	<section>
+		<div class="secao-motivacional flex">
+			<div class="container-text">
+				<h2><span class="text primeiro-texto">>> Você << é </span>
+				</h2>
+				<p><span class="text segundo-texto">Legal ❤</span></p>
+
+				<button class="btn-principal"><a href="">Busque ajuda</a></button>
+			</div>
+			<div>
+				<img class="img-motivacao" src="../img/abraco.jpg" alt="">
+			</div>
+		</div>
+
+		<script>
+			const text = document.querySelector(".segundo-texto");
+
+			const textLoad = () => {
+				setTimeout(() => {
+					text.textContent = "especial";
+				}, 0);
+				setTimeout(() => {
+					text.textContent = "importante";
+				}, 4000);
+				setTimeout(() => {
+					text.textContent = "capaz";
+				}, 8000);
+				setTimeout(() => {
+					text.textContent = "necessário";
+				}, 12000); //1s = 1000 milliseconds 
+			}
+
+			textLoad();
+			setInterval(textLoad, 12000);
+		</script>
+	</section>
+
+	<section class="section-cards flex">
+		<div class="card-wrapper flex">
+			<div class="card">
+				<div class="circle">
+					<div title-card>
+						<img src="../img/cvv.png" alt="">
+					</div>
+				</div>
+				<div class="content">
+					<p> Conheça a CVV (Centro de Valorização da Vida), uma central de atendimento que irá te ajudar nos
+						momentos difíceis.</p>
+
+					<button class="btn-principal"> <a href="https://www.cvv.org.br/voluntario/" class="b">Saiba mais</a> </button>
+				</div>
+			</div>
+			<div class="card">
+				<div class="circle">
+					<div title-card>
+						<img src="../img/icon-laco.png" alt="">
+					</div>
+				</div>
+				<div class="content">
+					<p> Você conhece a história do setembro amarelo? caso não, e tiver interesse em saber, clique no
+						botão abaixo. Garantimos que será um bom conhecimento a se ter. </p>
+
+					<button class="btn-principal"> <a href="historia.html">Saiba mais</a> </button>
+				</div>
+			</div>
+
+			<div class="card">
+
+				<div class="circle">
+					<div title-card>
+						<img src="../img/sintoma.png" alt="">
+					</div>
+
+				</div>
+
+				<div class="content">
+					<p> Quais sintomas uma pessoa que esteja pensando em tirar a própia vida pode ter? </p>
+
+					<button class="btn-principal"> <a href=".sintomas">Saiba mais</a> </button>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section>
+
+		<div class="container_inputFelicidade flex">
+
+			<div class="slider flex">
+
+				<p class="sub-title">COMO VOCÊ ESTÁ?</p>
+
+				<div class="range-pontos">
+
+					<img src="../img/happy.png"
+						alt="">
+
+					<img src="../img/triste.png"
+						alt="">
+
+
+				</div>
+				<input type="range" min="0" max="200" value="0" id="felicidade" style="width: 100%">
+
+				<div class="section">
+					<div class="emojis">
+
+						<div class="hidden" id="feliz">
+							<p class="texto-condicional">Junte-se às atividades de prevenção,conscientização e eventos
+								no
+								Setembro
+								Amarelo. Junte-se à luta!</p>
+							<a href="https://www.cvv.org.br/voluntario/" class="b"><button class="btn-principal">Seja um
+									voluntário</button></a>
+						</div>
+
+						<div class="hidden" id="triste">
+							<p class="texto-condicional">Busque ajuda, faça uma ligação para nosco e vamos te ajudar.</p>
+							<a href="https://www.cvv.org.br/voluntario/" class="b"><button
+									class="btn-principal">Converse
+									com o
+									cvv</button></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+			const slider = document.querySelector('#felicidade')
+
+			const feliz = document.querySelector('#feliz')
+			const triste = document.querySelector('#triste')
+			slider.oninput = () => {
+
+				let value = slider.value;
+
+				if (value >= 100) {
+					triste.classList.remove('hidden')
+					feliz.classList.add('hidden')
+
+				} else {
+					feliz.classList.remove('hidden')
+					triste.classList.add('hidden')
+				}
+
+			}
+		</script>
+
+	</section>
+
+	<section class="section-sintomas">
+		<div>
+			<h2>Áreas de risco</h2>
+			<ul class="lista-sintomas">
+				<li>
+					<p>Experiência recente de perdas significativas</p>
+				</li>
+				<li>
+					<p>Baixa resiliência emocional</p>
+				</li>
+				<li>
+					<p>Personalidade impulsiva, agressiva ou com oscilações de humor</p>
+				</li>
+				<li>
+					<p>Histórico de abuso físico ou sexual durante a infância</p>
+				</li>
+				<li>
+					<p>Sentimentos de desesperança, desespero e desamparo</p>
+				</li>
+				<li>
+					<p>Conflitos relacionados à identidade sexual</p>
+				</li>
+				<li>
+					<p>Entre outros</p>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>Sinais de alerta</h2>
+			<ul class="lista-sintomas">
+				<li>
+					<p>Achar que os outros ficarão melhor depois da sua morte</p>
+				</li>
+				<li>
+					<p>Isolar-se e não ter esperança no futuro</p>
+				</li>
+				<li>
+					<p>Achar que nada nem ninguém pode ajudar
+					</p>
+				</li>
+				<li>
+					<p>Alterações no sono e no apetite</p>
+				</li>
+				<li>
+					<p>Descuido com a aparência</p>
+				</li>
+				<li>
+					<p>Frases como “preferia estar morto” ou “quero desaparecer</p>
+				</li>
+				<li>
+					<p>Não gostar mais de coisas que curtia antes</p>
+				</li>
+				<li>
+					<p>Piora do desempenho na escola ou no trabalho</p>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h2>Fatores de segurança</h2>
+			<ul class="lista-sintomas">
+				<li>
+					<p>Autoestima elevada</p>
+				</li>
+				<li>
+					<p>Bom suporte familiar</p>
+				</li>
+				<li>
+					<p>Crenças religiosas, culturais ou étnicas</p>
+				</li>
+				<li>
+					<p>Laços sociais estabelecidos</p>
+				</li>
+				<li>
+					<p>Vida social e lazer</p>
+				</li>
+				<li>
+					<p>Estar empregado</p>
+				</li>
+				<li>
+					<p>Ausência de doença mental</p>
+				</li>
+				<li>
+					<p>Entre outros</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- <section>
+
+		<div class="secao-motivacional flex">
+			<div>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Twemoji12_1f397.svg/440px-Twemoji12_1f397.svg.png"
+					alt="">
+			</div>
+			<div class="container-text">
+
+				<p>
+					<span class="text primeiro-texto">Você é </span>
+					<span class="text segundo-texto">Legal ❤</span>
+				</p>
+			</div>
+		</div>
+
+		<script>
+			const text = document.querySelector(".segundo-texto");
+
+			const textLoad = () => {
+				setTimeout(() => {
+					text.textContent = "especial ❤";
+				}, 0);
+				setTimeout(() => {
+					text.textContent = "importante ❤";
+				}, 4000);
+				setTimeout(() => {
+					text.textContent = "amado ❤";
+				}, 8000); //1s = 1000 milliseconds 
+			}
+
+			textLoad();
+			setInterval(textLoad, 12000);
+
+		</script>
+	</section>
+
+	<section> -->
+	<!-- 
+		<div class="secao-padrao flex">
+
+			<div class="container-text-imagem flex">
+				<p class="title">Não é <span class="marca-texto"> frescura</span></p>
+			</div>
+
+			<div class="img-principal">
+				<img src="img/triste.png" alt="">
+			</div>
+		</div>
+	</section> -->
+
+	<!-- <section class="secao-padrao secao-prevencao">
+		<h1>Sinais de alerta</h1>
+		<div class="prevencao">
+
+			<div class="container-sinal flex">
+
+				<div class="img-sinal">
+					<img src="img/chorando.png" alt="">
+					<p>Pensamentos Suícidas</p>
+				</div>
+
+				<div class="content-sinal flex">
+					<p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares
+						ou nas
+						redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".
+					</p>
+				</div>
+			</div>
+
+			<div class="container-sinal flex">
+
+				<div class="img-sinal">
+					<img src="img/chorando.png" alt="">
+					<p>Pensamentos Suícidas</p>
+				</div>
+
+				<div class="content-sinal flex">
+					<p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares
+						ou nas
+						redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".
+					</p>
+				</div>
+			</div>
+
+			<div class="container-sinal flex">
+
+				<div class="img-sinal">
+					<img src="img/chorando.png" alt="">
+					<p>Pensamentos Suícidas</p>
+				</div>
+
+				<div class="content-sinal flex">
+					<p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares
+						ou nas
+						redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".
+					</p>
+				</div>
+			</div>
+
+			<div class="container-sinal flex">
+
+				<div class="img-sinal">
+					<img src="img/chorando.png" alt="">
+					<p>Pensamentos Suícidas</p>
+				</div>
+
+				<div class="content-sinal flex">
+					<p>Pessoas que estão pensando em suicídio podem verbalizar esses sentimentos para amigos, familiares
+						ou nas
+						redes sociais. Eles podem dizer coisas como "Eu não aguento mais" ou "A vida não vale a pena".
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</section> -->
+
+	<footer>
+		<div>
+			<h4>Busque ajuda</h4>
+			<a class="footer-link" href="https://www.cvv.org.br/voluntario/">Acesse o site da CVV</a>
+		</div>
+		<nav>
+			<h4>Navegação</h4>
+			<ul>
+				<li><a href="paginaIncial.html" class="footer-link" target="main">Home</a></li>
+				<li><a href="historia.html" class="footer-link" target="main">História</a></li>
+			</ul>
+		</nav>
+
+		<div>
+			<p>Não hesite em buscar por ajuda, nossa instituição está aqui por você :) </p>
+		</div>
+	</footer>
+</body>
+
+</html>
